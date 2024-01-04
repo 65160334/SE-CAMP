@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/my-folder', function () {
-    // return view('myrount');
+
 
     $data = ['val_a' => 'Hello World'];
     $data ['val_b'] = 'laravel';
@@ -29,4 +30,13 @@ Route::post('/my-rount', function (Request $req) {
     $data['myinput'] = $req->input('myinput');
     return view('myrount',$data);
 });
+Route::get('/my-controller', [MyController::class, 'index']);
+
+
+
+
+
+
+
+
 

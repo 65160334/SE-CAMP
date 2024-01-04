@@ -5,6 +5,6 @@
 </h1>
 <form method="post" action="/my-rount">
     @csrf
-    <input type="text" name="my input">
+    <input type="text" name="myinput">
     <button type="submit">Submit</button>
 </form>
