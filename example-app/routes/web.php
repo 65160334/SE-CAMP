@@ -21,7 +21,7 @@ Route::get('/', function () {
 Route::get('/my-folder', function () {
 
 
-    $data = ['val_a' => 'Hello World'];
+
     $data ['val_b'] = 'laravel';
 
     return view('myfolder.mypage',$data);
