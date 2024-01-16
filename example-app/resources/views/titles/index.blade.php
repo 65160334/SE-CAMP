@@ -398,7 +398,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             <a href="{{ url('/titles/'. $title->tit_id)}}"
                                                 class="btn btn-warning">เเก้ไข</a>
                                         </td>
-
+                                        <td><span class="badge bg-danger"></span></td>
                                     </tr>
                                     <tr>
                                         <td>2.</td>
