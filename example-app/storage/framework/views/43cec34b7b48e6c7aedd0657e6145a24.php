@@ -1,0 +1,2 @@
+
+<?php echo $__env->make('layouts.default', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\SE-CAMP\example-app\resources\views/home.blade.php ENDPATH**/ ?>
