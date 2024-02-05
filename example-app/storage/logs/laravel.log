@@ -2572,3 +2572,19 @@
 #19 C:\\xampp\\htdocs\\SE-CAMP\\example-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\xampp\\\\htdocs...')
 #20 {main}
 "} 
+[2024-02-05 10:54:55] local.ERROR: Command "server" is not defined.
+
+Did you mean one of these?
+    make:observer
+    serve {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"server\" is not defined.
+
+Did you mean one of these?
+    make:observer
+    serve at C:\\xampp\\htdocs\\SE-CAMP\\example-app\\vendor\\symfony\\console\\Application.php:737)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\SE-CAMP\\example-app\\vendor\\symfony\\console\\Application.php(266): Symfony\\Component\\Console\\Application->find('server')
+#1 C:\\xampp\\htdocs\\SE-CAMP\\example-app\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\xampp\\htdocs\\SE-CAMP\\example-app\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\xampp\\htdocs\\SE-CAMP\\example-app\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 {main}
+"} 
