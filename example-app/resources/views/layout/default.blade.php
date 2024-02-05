@@ -3,16 +3,6 @@
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
-<?php
-// Check if the page has already been refreshed
-if (!isset($_COOKIE['page_refreshed'])) {
-    // Set a cookie to mark that the page has been refreshed
-    setcookie('page_refreshed', '1', time() + 60); // Expires in 60 seconds
-
-    // Refresh the page after 1 second
-    echo '<meta http-equiv="refresh" content="1">';
-}
-?>
 <html lang="en">
 
 <head>
@@ -35,7 +25,6 @@ if (!isset($_COOKIE['page_refreshed'])) {
 </head>
 
 <body class="hold-transition sidebar-mini">
-    
     <div class="wrapper">
 
         <!-- Navbar -->
@@ -123,15 +112,15 @@ if (!isset($_COOKIE['page_refreshed'])) {
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="{{ url('assets/dist/img/user3-128x128.jpg') }}" alt="User Avatar"
+                                <img src="{{ url('assets/dist/img/user6-128x128.jpg') }}" alt="User Avatar"
                                     class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
-                                        Nora Silvester
+                                        Thanakitty UWU
                                         <span class="float-right text-sm text-warning"><i
                                                 class="fas fa-star"></i></span>
                                     </h3>
-                                    <p class="text-sm">The subject goes here</p>
+                                    <p class="text-sm">กินลาบบ่อ้าย</p>
                                     <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
                                 </div>
                             </div>
@@ -197,11 +186,11 @@ if (!isset($_COOKIE['page_refreshed'])) {
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="{{ url('assets/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2"
+                        <img src="{{ url('assets/dist/img/user5-128x128.jpg') }}" class="img-circle elevation-2"
                             alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Thanakit Nonsilat</a>
+                        <a href="#" class="d-block">Thanawan Sudhom</a>
                     </div>
                 </div>
 
@@ -247,7 +236,6 @@ if (!isset($_COOKIE['page_refreshed'])) {
                                 </li>
                             </ul>
                         </li>
-                       
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
@@ -257,7 +245,6 @@ if (!isset($_COOKIE['page_refreshed'])) {
                                 </p>
                             </a>
                         </li>
-                        
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -267,122 +254,156 @@ if (!isset($_COOKIE['page_refreshed'])) {
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-          
- 
-     <!-- Content Header (Page header) -->
-     <div class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1 class="m-0">SE CAMP</h1>
-                    <td>
-                        <button onclick="location.href='/logout'" type="button" class="btn btn-block btn-warning btn-lg">logout</button>
-                      </td>
-                </div><!-- /.col -->
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Titles</a></li>
-                    </ol>
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
- 
-     <!-- Main content -->
-     <div class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- general form elements -->
-                    <div class="card card-primary">
-                        <div class="card-header">
-                            <h3 class="card-title">ข้อมูลคำนำหน้าชื่อ (Title)</h3>
-                        </div>
-                        <!-- /.card-header -->
-                        <!-- form start -->
-                        <form action="/titles<?php if (isset($title_id)) {
-                            echo '/' . $title_id->tit_id;
-                        } ?>" method="post">
-                            <?php if (isset($title_id)) { ?>
-                            @method('PUT')
-                            <?php } ?>
-                            @csrf
-                            <div class="card-body">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">คำนำหน้าชื่อ</label>
-                                    <input type="text" name="tit_name" value="<?php if (isset($title_id)) {
-                                        echo $title_id->tit_name;
-                                    } ?>" class="form-control"
-                                        id="exampleInputEmail1" placeholder="เช่น นาย นาง นางสาว ฯลฯ">
-                                </div>
-                                <div class="form-check">
-                                    <input type="checkbox" name="tit_is_active" <?php if(isset($title_id) &&
-                                                $title_id->tit_is_active == 1){?> checked
-                                        <?php }?> class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">ใช้งาน</label>
-                                </div>
-                            </div>
-                            <!-- /.card-body -->
-
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-success">บันทึก</button>
-                                
-                            </div>
-                            
-                        </form>
-                    </div>
-                    <!-- /.card -->
-                </div>
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">SE-CAMP</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Starter Page</li>
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
             </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">ผลลัพธ์</h3>
-                        </div>
-                        <!-- /.card-header -->
-                        <div class="card-body">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 10px">#</th>
-                                        <th>คำนำหน้าชื่อ</th>
-                                        <th>สถานะการใช้งาน</th>
-                                        <th>เครื่องมือ</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach($titles as $index => $title) {?>
-                                    <tr>
-                                        <td>{{ $index + 1 }}.</td>
-                                        <td>{{ $title->tit_name }}</td>
-                                        <td>
-                                            {{ $title->tit_is_active }}
-                                        </td>
-                                        <td>
-                                            <a href="{{ url('/titles/' . $title->tit_id) }}"
-                                                class="btn btn-warning">แก้ไข</a>
-                                            <form method="post" action="/titles/{{ $title->tit_id }}">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="btn btn-danger">ลบ</button>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- /.card-body -->
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6">
+                        <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Form</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form>
+                <div class="card-body">
+
+
+                  <div class="form-group">
+                    <label for="InputName">ชื่อ</label>
+                    <input  type="Name" class="form-control" id="InputName">
+                  </div>
+
+
+                  <div class="form-group">
+                    <label for="Inputlastname">นามสกุล</label>
+                    <input type="Lastname" class="form-control" id="Inputlastname">
+                  </div>
+
+                   <!-- Date dd/mm/yyyy -->
+                <div class="form-group">
+                  <label>วัน/เดือน/ปีเกิด</label>
+
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                     </div>
-                    <!-- /.card -->
+                    <input type="text" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask  placeholder="dd/mm/yyyy">
+                  </div>
+                  <!-- /.input group -->
                 </div>
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content -->
+                <!-- /.form group -->
+                <div class="form-group">
+                    <label for="Inputlastname">อายุ</label>
+                    <input type="Lastname" class="form-control" id="Inputlastname">
+                  </div>
+
+                 <!-- radio Age -->
+
+                 <div class="container">
+                 <label >เพศ</label><br />
+                 <form>
+                 <label class="radio-inline">
+                 <input type="radio" name="genderradio">ชาย
+                 </label>
+                 <label class="radio-inline">
+                 <input type="radio" name="genderradio">หญิง
+                    </label>
+                </form>
+                </div>
+
+
+                  <div class="form-group">
+                    <label for="exampleInputFile">ใส่รูปภาพ</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                      </div>
+                      <div class="input-group-append">
+                        <span class="input-group-text">Upload</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                        <label>ที่อยู่</label>
+                        <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
+                      </div>
+
+
+                      <!-- select -->
+                      <div class="form-group">
+                        <label>สีที่ชอบ</label>
+                        <select class="custom-select">
+                          <option>สีเเดง</option>
+                          <option>สีเขียว</option>
+                          <option>สีน้ำเงิน</option>
+                        </select>
+                      </div>
+
+
+                      <!-- radio Music-->
+                      <div class="container">
+                 <label >เเนวเพลงที่ชอบ</label><br />
+                 <form>
+                 <label class="radio-inline">
+                 <input type="radio" name="Musicradio">เพื่อชีวิต
+                 </label>
+                 <label class="radio-inline">
+                 <input type="radio" name="Musicradio">ลูกทุ่ง
+                    </label>
+                    <label class="radio-inline">
+                 <input type="radio" name="Musicradio">อื่นๆ
+                    </label>
+                </form>
+                </div>
+
+
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">ยินยอมให้เก็บข้อมูล</label>
+                  </div>
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="Reset" class="btn btn-primary">Reset</button>
+                </div>
+              </form>
+            </div>
+
+
+                        </div>
+                        <!-- /.col-md-6 -->
+                        <div class="col-lg-6">
+
+                        </div>
+                        <!-- /.col-md-6 -->
+                    </div>
+                    <!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
 
